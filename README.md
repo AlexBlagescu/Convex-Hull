@@ -4,7 +4,9 @@ Given a set of points in the plane. the convex hull of the set is the smallest c
 
 Let points[0..n-1] be the input array:
 
-        1. Find the bottom-most point by comparing y coordinate of all points. If there are two points with the same y value, then the point with smaller x coordinate value is considered. Let the bottom-most point be P0. Put P0 at first position in output hull.
+        1. Find the bottom-most point by comparing y coordinate of all points. 
+           If there are two points with the same y value, then the point with smaller x coordinate value is considered. 
+           Let the bottom-most point be P0. Put P0 at first position in output hull.
 
         2. Consider the remaining n-1 points and sort them by polar angle in counterclockwise order around points[0]. If the polar angle of two points is the same, then put the nearest point first.
 
@@ -25,4 +27,4 @@ Let points[0..n-1] be the input array:
 Time Complexity:
 
 Let n be the number of input points. The algorithm takes O(nLogn) time if we use a O(nLogn) sorting algorithm.
-The first step (finding the bottom-most point) takes O(n) time. The second step (sorting points) takes O(nLogn) time. The third    step takes O(n) time. In the third step, every element is pushed and popped at most one time. So the sixth step to process points one by one takes O(n) time, assuming that the stack operations take O(1) time. Overall complexity is O(n) + O(nLogn) + O(n) + O(n) which is O(nLogn)
+The first step (finding the bottom-most point) takes O(n) time. The second step (sorting points) takes O(nLogn) time. The third    step takes O(n) time. In the third step, every element is pushed and popped at most one time. So the sixth step to process points one by one takes O(n) time, assuming that the stack operations take O(1) time. Overall complexity is O(n) + O(nLogn) + O(n) + O(n) which is O(nLogn).
